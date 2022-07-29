@@ -68,26 +68,33 @@
 				<p class="w3ls-title-sub">Tasty</p>
 				<h3 class="w3ls-title">Our <span>Special</span></h3>
 			</div>
-			<div class="row">
+
+			
+
+			<div class="row" hight="200px" width="200px">
+			
+				@foreach ($menu as $m)
 				<!-- blog grid -->
-				<div class="col-lg-4 col-md-6">
-					<div class="card border-0 med-blog">
-						<div class="card-header p-0">
+				<div class="col-lg-4 col-md-6" hight="200px" width="200px">
+					<div class="card border-0 med-blog" hight="200px" width="200px">
+						<div class="card-header p-0" hight="200px" width="200px">
 							<a href="{{route('menu')}}">
-								<img class="card-img-bottom" src="{{url('useraseets/')}}/images/blog1.jpg" alt="Card image cap">
+								<img class="card-img-bottom" src="{{url('upload/'.$m->img)}}" hight="200px" width="200px" alt="Card image cap">
 							</a>
 						</div>
 						<div class="card-body border border-top-0">
-							<h5 class="blog-title card-title m-0"><a href="{{route('menu')}}">French Burger</a></h5>
+							<h5 class="blog-title card-title m-0"><a href="{{route('menu')}}">{{$m->productname}}</a></h5>
 							<p class="mt-3">Cras ultricies ligula sed magna dictum porta auris blandita.</p>
-							<a href="menu.html" class="btn button-w3ls mt-4 mb-3">View More
+							<a href="{{route('menu')}}" class="btn button-w3ls mt-4 mb-3">View More
 								<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
 							</a>
 						</div>
 					</div>
 				</div>
+				@endforeach
 				<!-- //blog grid -->
 			</div>
+			
 		</div>
 	</section>
 	<!-- //specials -->
@@ -148,7 +155,7 @@
 
 				</div>
 			</div>
-			<img src="{{url('useraseets/')}}/images/sub.png" alt="" class="img-fluid sub-img">
+			<img src="{{url('userassets/')}}/images/sub.png" alt="" class="img-fluid sub-img">
 		</div>
 	</section>
 	<!-- //newsletter -->

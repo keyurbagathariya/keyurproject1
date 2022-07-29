@@ -1,4 +1,4 @@
-@extends()
+@extends('userside/master')
 
 @section('main')
 
@@ -11,7 +11,7 @@
 <div class="breadcrumb-agile bg-light py-2">
     <ol class="breadcrumb bg-light m-0">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="{{route('home')}}">Home</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
     </ol>
@@ -33,7 +33,7 @@
                 <h3 class="footer-title mb-4 pb-lg-2">Our Address</h3>
                 <div class="row address-info-w3ls">
                     <div class="col-3 address-left">
-                        <img src="{{url('useraseets/')}}/images/c1.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/c1.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-9 address-right mt-2">
                         <h5 class="address mb-2">Address</h5>
@@ -42,18 +42,18 @@
                 </div>
                 <div class="row address-info-w3ls my-2">
                     <div class="col-3 address-left">
-                        <img src="{{url('useraseets/')}}/images/c2.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/c2.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-9 address-right mt-2">
                         <h5 class="address mb-2">Email</h5>
                         <p>
-                            <a href="mailto:example@email.com"> mail@example.com</a>
+                            <a href="bagathariyakeyur7600@gmail.com">bagathariyakeyur7600@gmail.com</a>
                         </p>
                     </div>
                 </div>
                 <div class="row address-info-w3ls">
                     <div class="col-3 address-left">
-                        <img src="{{url('useraseets/')}}/images/c3.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/c3.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-9 address-right mt-2">
                         <h5 class="address mb-2">Phone</h5>
@@ -90,7 +90,7 @@
 <!-- map -->
 <section class="map">
     <iframe
-        src="{{url('useraseets/')}}/https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007"
+        src="{{url('userassets/')}}/https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007"
         allowfullscreen></iframe>
 </section>
 <!-- //map -->

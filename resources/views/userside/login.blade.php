@@ -25,16 +25,17 @@
 			<div class="login-body">
 				<div class="login p-4 mx-auto">
 					<h5 class="text-center mb-4">Login Now</h5>
-					<form action="#" method="post">
+					<form  method="post">
+						@csrf
 						<div class="form-group">
-							<label>Your Name</label>
-							<input type="text" class="form-control" name="name" placeholder="" required="">
+							<label>Enter Your Email</label>
+							<input type="email" class="form-control" name="email" placeholder="" required="">
 						</div>
 						<div class="form-group">
 							<label class="mb-2">Password</label>
 							<input type="password" class="form-control" name="password" placeholder="" required="">
 						</div>
-						<button type="submit" class="btn submit mb-4" href="{{route('home')}}">Login</button>
+						<input type="submit" class="btn submit mb-4" href="{{route('menu')}}" name="login" value="Login">
 						<p class="forgot-w3ls text-center mb-3">
 							<a href="#" class="text-da">Forgot your password?</a>
 						</p>

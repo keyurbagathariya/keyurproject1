@@ -17,7 +17,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/menu">
+            <a href="{{route('addproduct')}}">
               <i class="bi bi-circle"></i><span>Menu</span>
             </a>
           </li>
@@ -35,12 +35,12 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/UserTable">
+            <a href="{{route('UserTable')}}">
               <i class="bi bi-circle"></i><span>UserTable</span>
             </a>
           </li>
           <li>
-            <a href="/ProductTable">
+            <a href="{{route('ProductTable')}}">
               <i class="bi bi-circle"></i><span>Product Table</span>
             </a>
           </li>
@@ -51,14 +51,14 @@
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('')}}users-profile.html">
+        <a class="nav-link collapsed" href="{{route('profile')}}">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('')}}pages-contact.html">
+        <a class="nav-link collapsed" href="{{route('contact')}}">
           <i class="bi bi-envelope"></i>
           <span>Contact</span>
         </a>

@@ -65,19 +65,20 @@
 					</div>
 					<div class="col-xl-5 col-md-7 top-social-agile text-md-right text-center pr-sm-0 mt-md-0 mt-2">
 						<div class="row middle-flex">
-							
-							@if(Session::has('user'))
+						
 							<div class="col-lg-5 col-4 top-w3layouts p-md-0 text-right">
+								@if(Session::has('user'))
 								<!-- logout -->
-								<a href="{{route('home')}}" class="btn login-button-2 text-uppercase text-wh">
+								<a href="{{route('logout')}}" class="btn login-button-2 text-uppercase text-wh">
 									<span class="fa fa-sign-in mr-2"></span>Logout</a>
 								
-							@else
+								@else
 								<!-- login -->
 								<a href="{{route('login')}}" class="btn login-button-2 text-uppercase text-wh">
 								<span class="fa fa-sign-in mr-2"></span>Login</a>
+								@endif
 							</div>
-							
+								
 
 							<div class="col-lg-7 col-8 social-grid-w3">
 								<!-- social icons -->
@@ -169,5 +170,4 @@
 		</div>
 	</div>
 	<!-- //navigation -->
-	<!-- //header 2 -->
-
+	<!-- //header 2 --

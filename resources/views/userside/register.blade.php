@@ -11,7 +11,7 @@
 	<div class="breadcrumb-agile bg-light py-2">
 		<ol class="breadcrumb bg-light m-0">
 			<li class="breadcrumb-item">
-				<a href="index.html">Home</a>
+				<a href="{{route('home')}}">Home</a>
 			</li>
 			<li class="breadcrumb-item active" aria-current="page">Register Page</li>
 		</ol>
@@ -24,26 +24,25 @@
 			<div class="login-body">
 				<div class="login p-4 mx-auto">
 					<h5 class="text-center mb-4">Register Now</h5>
-					<form action="#" method="post">
+					<form  method="post" enctype="multipart/form-data" action="">
+						@csrf
 						<div class="form-group">
-							<label>Your Name</label>
-							<input type="text" class="form-control" name="name" placeholder="" required="">
+							<label>Your Name </label>
+							<input type="text" class="form-control" name="name" placeholder="" >
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input type="email" class="form-control" name="email" placeholder="" required="">
+							<input type="email" class="form-control" name="email" placeholder="" >
 						</div>
 						<div class="form-group">
 							<label class="mb-2">Password</label>
-							<input type="password" class="form-control" name="password" id="password1" placeholder=""
-								required="">
+							<input type="password" class="form-control" name="password" id="password1">
 						</div>
 						<div class="form-group">
 							<label>image</label>
-							<input type="file" class="form-control" name="image" id="image" placeholder=""
-								required="">
+							<input type="file" class="form-control" name="image" id="image">
 						</div>
-						<button type="submit" class="btn submit mb-4">Register</button>
+						<input type="submit" class="btn btn-btn-warning " name="register" value="Register">
 						<p class="text-center">
 							<a href="#" class="text-da">By clicking Register, I agree to your terms</a>
 						</p>

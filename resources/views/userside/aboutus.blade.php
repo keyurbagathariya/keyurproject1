@@ -38,7 +38,7 @@
                     mi, vulputate ac metus at, semper varius orci..</p>
             </div>
             <div class="col-lg-6 text-center mt-lg-0 mt-4">
-                <img src="{{url('useraseets/')}}/images/ab.jpg" alt="about" class="img-fluid" />
+                <img src="{{url('userassets/')}}/images/ab.jpg" alt="about" class="img-fluid" />
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
                         <p>Morbi viverra lacus commodo felis semper lectus feugiat.</p>
                     </div>
                     <div class="col-4 wthree_banner_bottom_grid_left text-lg-right text-center">
-                        <img src="{{url('useraseets/')}}/images/s1.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/s1.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
             <div class="col-lg-5 w3pvt-lauits_banner_bottom_left mt-lg-0 mt-4">
                 <div class="row">
                     <div class="col-4 wthree_banner_bottom_grid_left text-lg-right text-center">
-                        <img src="{{url('useraseets/')}}/images/s2.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/s2.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-8 wthree_banner_bottom_grid_right">
                         <h4 class="mb-3"><a href="{{route('login')}}">Free & Easy Returns</a></h4>
@@ -87,7 +87,7 @@
                         <p>Morbi viverra lacus commodo felis semper lectus feugiat.</p>
                     </div>
                     <div class="col-4 wthree_banner_bottom_grid_left text-lg-right text-center pr-lg-0">
-                        <img src="{{url('useraseets/')}}/images/s3.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/s3.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="col-lg-4 w3pvt-lauits_banner_bottom_left mt-lg-0 mt-4">
                 <div class="row">
                     <div class="col-4 wthree_banner_bottom_grid_left text-lg-right text-center pl-lg-0">
-                        <img src="{{url('useraseets/')}}/images/s4.png" alt="" class="img-fluid">
+                        <img src="{{url('userassets/')}}/images/s4.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-8 wthree_banner_bottom_grid_right pr-lg-0">
                         <h4 class="mb-3"><a href="{{route('login')}}"">24/7 Support</a></h4>
@@ -108,7 +108,7 @@
         </div>
     </div>
     <div class="img-blog-2">
-        <img src="{{url('useraseets/')}}/images/img.png" alt="" class="img-fluid">
+        <img src="{{url('userassets/')}}/images/img.png" alt="" class="img-fluid">
     </div>
 </section>
 <!-- //services -->
@@ -124,7 +124,7 @@
         </div>
         <div class="row team-bottom pt-4">
             <div class="col-lg-3 col-6 team-grid">
-                <a href="#team"><img src="{{url('useraseets/')}}/images/t1.png" class="img-fluid" alt=""></a>
+                <a href="#team"><img src="{{url('userassets/')}}/images/t1.png" class="img-fluid" alt=""></a>
                 <div class="caption">
                     <div class="team-text">
                         <h4><a href="#team">Mack Joe</a></h4>
@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-6 team-grid">
-                <a href="#team"><img src="{{url('useraseets/')}}/images/t2.png" class="img-fluid" alt=""></a>
+                <a href="#team"><img src="{{url('userassets/')}}/images/t2.png" class="img-fluid" alt=""></a>
                 <div class="caption">
                     <div class="team-text">
                         <h4><a href="#team">Cruz Deo</a></h4>
@@ -174,7 +174,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-6 team-grid mt-lg-0 mt-4">
-                <a href="#team"><img src="{{url('useraseets/')}}/images/t3.png" class="img-fluid" alt=""></a>
+                <a href="#team"><img src="{{url('userassets/')}}/images/t3.png" class="img-fluid" alt=""></a>
                 <div class="caption">
                     <div class="team-text">
                         <h4><a href="#team">Rochy Jae</a></h4>
@@ -199,7 +199,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-6 team-grid  mt-lg-0 mt-4">
-                <a href="#team"><img src="{{url('useraseets/')}}/images/t4.png" class="img-fluid" alt=""></a>
+                <a href="#team"><img src="{{url('userassets/')}}/images/t4.png" class="img-fluid" alt=""></a>
                 <div class="caption">
                     <div class="team-text">
                         <h4><a href="#team">Rojo Poy</a></h4>

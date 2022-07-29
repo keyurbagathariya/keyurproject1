@@ -11,7 +11,7 @@
 <div class="breadcrumb-agile bg-light py-2">
     <ol class="breadcrumb bg-light m-0">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="{{route('home')}}">Home</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Single Page</li>
     </ol>
@@ -32,14 +32,14 @@
                     <div class="blog-grid-top">
                         <div class="b-grid-top">
                             <div class="blog_info_left_grid">
-                                <a href="single.html">
-                                    <img src="{{url('useraseets/')}}/images/single1.jpg" class="img-fluid" alt="">
+                                <a href="{{route('single')}}">
+                                    <img src="{{url('userassets/')}}/images/single1.jpg" class="img-fluid" alt="">
                                 </a>
                             </div>
                         </div>
 
                         <h3>
-                            <a href="single.html" class="single-text text-da font-weight-light">Nemo enim ipsam
+                            <a href="{{route('single')}}" class="single-text text-da font-weight-light">Nemo enim ipsam
                                 voluptatem quia voluptas
                                 sit aspernatur aut odit aut fugit 2018</a>
                         </h3>
@@ -80,7 +80,7 @@
                             </p>
                         </div>
                         <h3>
-                            <a href="single.html" class="single-text text-da font-weight-light">Nemo enim ipsam
+                            <a href="{{route('single')}}" class="single-text text-da font-weight-light">Nemo enim ipsam
                                 voluptatem quia voluptas
                                 sit aspernatur aut odit aut fugit 2019</a>
                         </h3>
@@ -99,7 +99,7 @@
                     <div class="comment-top">
                         <h4>Comments</h4>
                         <div class="media">
-                            <img src="{{url('useraseets/')}}/images/te3.jpg" alt="" class="img-fluid" />
+                            <img src="{{url('userassets/')}}/images/te3.jpg" alt="" class="img-fluid" />
                             <div class="media-body">
                                 <h5 class="mt-0">Joseph Goh</h5>
                                 <p>Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim
@@ -110,7 +110,7 @@
                         </div>
                         <div class="media mt-3">
                             <a class="d-flex pr-3" href="#">
-                                <img src="{{url('useraseets/')}}/images/te2.jpg" alt="" class="img-fluid" />
+                                <img src="{{url('userassets/')}}/images/te2.jpg" alt="" class="img-fluid" />
                             </a>
                             <div class="media-body">
                                 <h5 class="mt-0">Richard Spark</h5>
@@ -201,7 +201,7 @@
                             </ul>
                         </div>
                         <div class="tech-btm">
-                            <img src="{{url('useraseets/')}}/images/blog1.jpg" class="img-fluid" alt="">
+                            <img src="{{url('userassets/')}}/images/blog1.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="tech-btm">
                             <h4>Categories</h4>
@@ -226,12 +226,12 @@
                             <div class="blog-grids row mb-3">
                                 <div class="col-md-5 blog-grid-left">
                                     <a href="single.html">
-                                        <img src="{{url('useraseets/')}}/images/blog1.jpg" class="img-fluid" alt="">
+                                        <img src="{{url('userassets/')}}/images/blog1.jpg" class="img-fluid" alt="">
                                     </a>
                                 </div>
                                 <div class="col-md-7 blog-grid-right mt-2">
                                     <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis
+                                        <a href="{{route('single')}}">Pellentesque dui, non felis. Maecenas male non felis
                                         </a>
                                     </h5>
                                     <div class="sub-meta">
@@ -242,13 +242,13 @@
                             </div>
                             <div class="blog-grids row mb-2">
                                 <div class="col-md-5 blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="{{url('useraseets/')}}/images/blog2.jpg" class="img-fluid" alt="">
+                                    <a href="{{route('single')}}">
+                                        <img src="{{url('userassets/')}}/images/blog2.jpg" class="img-fluid" alt="">
                                     </a>
                                 </div>
                                 <div class="col-md-7 blog-grid-right mt-3">
                                     <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis
+                                        <a href="{{route('single')}}">Pellentesque dui, non felis. Maecenas male non felis
                                         </a>
                                     </h5>
                                     <div class="sub-meta">
@@ -262,13 +262,13 @@
                             <h4>Recent Post</h4>
                             <div class="blog-grids">
                                 <div class="blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="{{url('useraseets/')}}/images/blog1.png" class="img-fluid" alt="">
+                                    <a href="{{route('single')}}">
+                                        <img src="{{url('userassets/')}}/images/blog1.png" class="img-fluid" alt="">
                                     </a>
                                 </div>
                                 <div class="blog-grid-right">
                                     <h5 class="mt-0">
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
+                                        <a href="{{route('single')}}">Pellentesque dui, non felis. Maecenas male</a>
                                     </h5>
                                 </div>
                                 <div class="clearfix"> </div>
