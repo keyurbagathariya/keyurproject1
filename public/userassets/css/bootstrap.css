@@ -477,6 +477,12 @@ mark,
   content: "\2014 \00A0";
 }
 
+#h{
+  padding: 15px;
+  width: 350px;
+  height: 300px;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -625,6 +631,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-bottom: 10px;
 }
 
 .col {

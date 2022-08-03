@@ -24,14 +24,25 @@ Route::get('/Admin', function () {
                                         // ADMINSIDE
 
 Route::get('/Admin',[admincontroller::class,'home'])->name('Admin');
+
+Route::get('/UserTable',[admincontroller::class,'UserTable'])->name('UserTable');
+Route::post('/UserTable',[admincontroller::class,'UserTable'])->name('UserTable');
+
+
+Route::get('/ProductTable',[admincontroller::class,'ProductTable'])->name('ProductTable');
+Route::post('/ProductTable',[admincontroller::class,'ProductTable'])->name('ProductTable');
+
+Route::get('/profile',[admincontroller::class,'profile'])->name('profile');
+Route::get('/contact',[admincontroller::class,'contact'])->name('contact');
+
+
+                                //INSERT
 Route::get('/addproduct',[admincontroller::class,'addproduct'])->name('addproduct');
 Route::post('/addproduct',[admincontroller::class,'addproduct'])->name('addproduct');
 
 Route::get('/users',[admincontroller::class,'users'])->name('users');
 Route::post('/users',[admincontroller::class,'users'])->name('users');
 
-Route::get('/UserTable',[admincontroller::class,'UserTable'])->name('UserTable');
-Route::post('/UserTable',[admincontroller::class,'UserTable'])->name('UserTable');
 
                                     //DELETE
 Route::get('/deleteuser/{id}',[admincontroller::class,'deleteuser'])->name('deleteuser');
@@ -44,31 +55,39 @@ Route::post('/editproduct/{id}',[admincontroller::class,'editproduct'])->name('e
 Route::get('/edituser/{id}',[admincontroller::class,'edituser'])->name('edituser');
 Route::post('/edituser/{id}',[admincontroller::class,'edituser'])->name('edituser');
 
-
-
-
-Route::get('/ProductTable',[admincontroller::class,'ProductTable'])->name('ProductTable');
-Route::post('/ProductTable',[admincontroller::class,'ProductTable'])->name('ProductTable');
-
-Route::get('/profile',[admincontroller::class,'profile'])->name('profile');
-Route::get('/contact',[admincontroller::class,'contact'])->name('contact');
-
                                         // USERSIDE
 
 Route::get('/',[landingcontroller::class,'home'])->name('home');
-Route::get('/aboutus',[landingcontroller::class,'aboutus'])->name('aboutus');
-Route::get('/blog',[landingcontroller::class,'blog'])->name('blog');
+Route::post('/',[landingcontroller::class,'home'])->name('home');
+
+Route::get('/manageprofile/{id}',[landingcontroller::class,'manageprofile'])->name('manageprofile');
+Route::post('/manageprofile/{id}',[landingcontroller::class,'manageprofile'])->name('manageprofile');
+
 Route::get('/contactus',[landingcontroller::class,'contactus'])->name('contactus');
-Route::get('/logout',[landingcontroller::class,'logout'])->name('logout');
+Route::post('/contactus',[landingcontroller::class,'contactus'])->name('contactus');
 
 Route::get('/login',[landingcontroller::class,'login'])->name('login');
 Route::post('/login',[landingcontroller::class,'login'])->name('login');
 
-Route::get('/menu',[landingcontroller::class,'menu'])->name('menu');
-
 Route::get('/register',[landingcontroller::class,'register'])->name('register');
 Route::post('/register',[landingcontroller::class,'register'])->name('register');
 
+
+Route::get('/aboutus',[landingcontroller::class,'aboutus'])->name('aboutus');
+Route::get('/ourchef',[landingcontroller::class,'ourchef'])->name('ourchef');
+Route::get('/blog',[landingcontroller::class,'blog'])->name('blog');
+Route::get('/logout',[landingcontroller::class,'logout'])->name('logout');
+Route::get('/menu',[landingcontroller::class,'menu'])->name('menu');
 Route::get('/services',[landingcontroller::class,'services'])->name('services');
 Route::get('/single',[landingcontroller::class,'single'])->name('single');
+Route::get('/addcart',[landingcontroller::class,'addcart'])->name('addcart');
 
+
+use App\Events\MyEvent;
+
+Route::get('/event',function(){
+    $details=[
+        'name'=>'keyur',
+    ];
+    return MyEvent::dispatch($details);
+});

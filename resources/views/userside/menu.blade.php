@@ -27,25 +27,27 @@
                 explicabo.Nemo
                 enim totam rem aperiam.</p>
         </div>
-        @foreach ($menu as $m)
+       
         <div class="row mt-4">
-            <div class="col-md-4">
+             @foreach ($menu as $m)
+            <div class="col-md-4" >
                 <div class="gallery-demo">
                     <a href="#gal1">
-                        <img src="{{url('upload/'.$m->img)}}" alt=" " class="img-fluid" />
+                        <img src="{{url('upload/'.$m->img)}}" alt=" " id="h" />
                         <h4 class="p-mask">{{$m->productname}} - <span>${{$m->price}}</span></h4>
                     </a>
                 </div>
             </div>
-        </div>
         @endforeach
+        </div>
+        
     </div>
 </section>
 
 <!-- gallery model-->
 <!-- gallery popup 1 -->
 @foreach ($menu as $m)
-<div id="gal1" class="pop-overlay">
+<div id="gal1" class="pop-overlay" >
     <div class="popup">
         <img class="img-fluid" src="{{url('upload/'.$m->img)}}" alt="">
         <h4 class="p-mask">{{$m->productname}} - - <span>${{$m->price}}</span></h4>

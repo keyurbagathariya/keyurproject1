@@ -83,7 +83,7 @@
             <div class="col-lg-4 w3pvt-lauits_banner_bottom_left">
                 <div class="row">
                     <div class="col-8 wthree_banner_bottom_grid_right text-right pl-lg-0">
-                        <h4 class="mb-3"><a href="{{route('login')}}"">Online Order</a></h4>
+                        <h4 class="mb-3"><a href="{{route('login')}}">Online Order</a></h4>
                         <p>Morbi viverra lacus commodo felis semper lectus feugiat.</p>
                     </div>
                     <div class="col-4 wthree_banner_bottom_grid_left text-lg-right text-center pr-lg-0">
@@ -100,7 +100,7 @@
                         <img src="{{url('userassets/')}}/images/s4.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-8 wthree_banner_bottom_grid_right pr-lg-0">
-                        <h4 class="mb-3"><a href="{{route('login')}}"">24/7 Support</a></h4>
+                        <h4 class="mb-3"><a href="{{route('login')}}">24/7 Support</a></h4>
                         <p>Morbi viverra lacus commodo felis semper lectus feugiat.</p>
                     </div>
                 </div>
@@ -112,119 +112,4 @@
     </div>
 </section>
 <!-- //services -->
-
-<!-- team -->
-<div class="team py-5" id="chefs">
-    <div class="container-fluid py-xl-5 py-lg-3">
-        <div class="title-section text-center mb-md-5 mb-4">
-            <h3 class="w3ls-title mb-3">Our <span>Chefs</span></h3>
-            <p class="titile-para-text mx-auto">Inventore veritatis et quasi architecto beatae vitae dicta sunt
-                explicabo.Nemo
-                enim totam rem aperiam.</p>
-        </div>
-        <div class="row team-bottom pt-4">
-            <div class="col-lg-3 col-6 team-grid">
-                <a href="#team"><img src="{{url('userassets/')}}/images/t1.png" class="img-fluid" alt=""></a>
-                <div class="caption">
-                    <div class="team-text">
-                        <h4><a href="#team">Mack Joe</a></h4>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook f1" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter f2" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus f3" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 team-grid">
-                <a href="#team"><img src="{{url('userassets/')}}/images/t2.png" class="img-fluid" alt=""></a>
-                <div class="caption">
-                    <div class="team-text">
-                        <h4><a href="#team">Cruz Deo</a></h4>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook f1" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter f2" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus f3" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 team-grid mt-lg-0 mt-4">
-                <a href="#team"><img src="{{url('userassets/')}}/images/t3.png" class="img-fluid" alt=""></a>
-                <div class="caption">
-                    <div class="team-text">
-                        <h4><a href="#team">Rochy Jae</a></h4>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook f1" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter f2" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus f3" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 team-grid  mt-lg-0 mt-4">
-                <a href="#team"><img src="{{url('userassets/')}}/images/t4.png" class="img-fluid" alt=""></a>
-                <div class="caption">
-                    <div class="team-text">
-                        <h4><a href="#team">Rojo Poy</a></h4>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook f1" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter f2" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus f3" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //team -->
 @endsection

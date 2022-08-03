@@ -75,11 +75,11 @@
 			
 				@foreach ($menu as $m)
 				<!-- blog grid -->
-				<div class="col-lg-4 col-md-6" hight="200px" width="200px">
-					<div class="card border-0 med-blog" hight="200px" width="200px">
-						<div class="card-header p-0" hight="200px" width="200px">
+				<div class="col-lg-4 col-md-6" >
+					<div class="card border-0 med-blog">
+						<div class="card-header p-0">
 							<a href="{{route('menu')}}">
-								<img class="card-img-bottom" src="{{url('upload/'.$m->img)}}" hight="200px" width="200px" alt="Card image cap">
+								<img class="card-img-bottom" src="{{url('upload/'.$m->img)}}" id="h" alt="Card image cap">
 							</a>
 						</div>
 						<div class="card-body border border-top-0">
@@ -100,6 +100,7 @@
 	<!-- //specials -->
 
 	<!-- two grids -->
+	@if(Session::has('user'))
 	<section class="offer pt-lg-3">
 		<div class="row no-gutters">
 			<div class="col-md-6 p-0">
@@ -130,6 +131,40 @@
 			</div>
 		</div>
 	</section>
+	@else
+
+	<section class="offer pt-lg-3">
+		<div class="row no-gutters">
+			<div class="col-md-6 p-0">
+				<div class="blog-sec-w3">
+					<div class="text-blog-w3 text-center p-2">
+						<h4 class="text-wh mb-3"><a href="{{route('menu')}}">Best Fast Food Collection</a></h4>
+						<p class="text-li">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Sed
+							ut perspiciatis
+							unde omnis iste natus error.</p>
+						<a href="{{route('login')}}" class="button-w3ls active mt-5">Order Now
+							<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 p-0">
+				<div class="blog-sec-w3 blog-sec-w3-2">
+					<div class="text-blog-w3 text-center p-2">
+						<h4 class="text-wh mb-3"><a href="{{route('login')}}">Organic Best & Fresh Food</a></h4>
+						<p class="text-li">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Sed
+							ut perspiciatis
+							unde omnis iste natus error.</p>
+						<a href="{{route('menu')}}" class="button-w3ls active mt-5">Order Now
+							<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	@endif
+
 	<!-- //two grids -->
 
 	
@@ -146,7 +181,8 @@
 				<div class="col-lg-6 col-md-9 text-center">
 					<h3 class="w3ls-title mb-2">Subscribe to Newsletter</h3>
 					<p class="mb-xl-5 mb-4">Free Delivery on your first order!</p>
-					<form action="#" method="post" class="d-flex newsletter-info">
+					<form action="{{route('home')}}" method="post" class="d-flex newsletter-info">
+						@csrf
 						<input type="email" name="email" placeholder="Enter your Email..." required="">
 						<button type="submit">Submit</button>
 					</form>

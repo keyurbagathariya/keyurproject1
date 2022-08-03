@@ -7,7 +7,7 @@
       <h1>Users</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{route('Admin')}}">Home</a></li>
           <li class="breadcrumb-item">Users</li>
           <li class="breadcrumb-item active">Elements</li>
         </ol>
@@ -35,27 +35,27 @@
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
-                    <input type="text" name="name" class="form-control" value="{{$user->name}}" >
+                    <input type="text" name="name" class="form-control" value="{{$u->name}}" >
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" name="email" class="form-control" value="{{$user->email}}">
+                    <input type="email" name="email" class="form-control" value="{{$u->email}}">
                   </div>
                 </div>
                
                 <div class="row mb-3">
                   <label for="inputpassword" class="col-sm-2 col-form-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="password" name="password" class="form-control" value="{{$user->password}}">
+                    <input type="password" name="password" class="form-control" value="{{$u->password}}">
                   </div>
                 </div>
                
                 <div class="row mb-3">
                   <label for="inputfile" class="col-sm-2 col-form-label">Image</label>
                   <div class="col-sm-10">
-                    <input class="form-control" name="image" type="file" id="formFile" value="{{$user->image}}">
+                    <input class="form-control" name="image" type="file" id="formFile" value="{{$u->image}}">
                   </div>
                 </div>
               

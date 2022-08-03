@@ -16,9 +16,34 @@ class admincontroller extends Controller
         return view('Admin/home',compact('tbl_u','tbl_p'));
     }
  
+   
+    public function ProductTable(Request $req)
+    {
+        $tbl_p=TblProduct::all();
+        return view('Admin/ProductTable',compact('tbl_p'));
+    }
+  
+    public function UserTable(Request $req)
+    {
+        $tbl_u=TblUser::all();
+ 
+        return view('Admin/UserTable',compact('tbl_u'));
+    }
+
+    public function contact(){
+        return view('Admin/contact');
+    }
+
+    public function profile(){
+        return view('Admin/profile');
+    }
+
+
+                    //INSERT
+
     public function addproduct(Request $req)
     {
-        $product=new TblProduct();            
+        
         if($req->input('save')){
            
             $product->productname=$req->input('name');
@@ -35,69 +60,35 @@ class admincontroller extends Controller
             $product->save();
         }
 
-        return view('Admin/addproduct',compact('product'));
+        return view('Admin/addproduct');
     }
 
-    
-    public function ProductTable(Request $req)
-    {
-        $tbl_p=TblProduct::all();
-        return view('Admin/ProductTable',compact('tbl_p'));
-    }
-    
     public function users(Request $req)
     {
-        $user=new TblUser();
+        $u=new TblUser();
 
-        if($req->input('submit')){
+        if($req->input('save')){
            
-           $user->name=$req->input('name');
-            $user->email=$req->input('email');
-            $user->password=$req->input('password');
+           $u->name=$req->input('name');
+            $u->email=$req->input('email');
+            $u->password=$req->input('password');
+            $u->image=$req->input('image');
+            $u->roleid=1;
             if($req->file('file')){
                 $image=$req->file('image');
                 $fname=$req->file('image')->getClientOriginalName();
                 $path="upload/";
                 $image->move($path,$fname);
-                $user->image=$fname;
+                $u->image=$fname;
            }
-           $user->save();
+           $u->save();
 
         }
 
-        return view('Admin/users',compact('user'));
+        return view('Admin/users',compact('u'));
     }
-
-    public function UserTable(Request $req)
-    {
-        $tbl_u=TblUser::all();
- 
-        return view('Admin/UserTable',compact('tbl_u'));
-    }
-
-                    
-                        //DELETE
-
-    public function deleteuser(Request $req ,$id)
-    {
-        
-
-        $tbl_u=TblUser::find($id);
-        $tbl_u->delete();  
-
-        return redirect('UserTable');
-       
-    }
-
-    public function deleteproduct(Request $req,$id){
-        $tbl_u=TblProduct::find($id);
-        $tbl_u->delete();  
-
-        return redirect('ProductTable');
-    }
-
-
-    
+      
+     
                     //UPDATE
 
 
@@ -143,16 +134,23 @@ class admincontroller extends Controller
             $product->save();
         }
         return view('Admin/addproduct',compact('product'));
-    }                    
-    public function contact()
-    {
-        return view('Admin/contact');
+    }                   
+
+                       //DELETE
+
+    public function deleteuser(Request $req ,$id){
+        
+        $tbl_u=TblUser::find($id);
+        $tbl_u->delete();  
+
+        return redirect('UserTable');
     }
 
-    public function profile()
-    {
-        return view('Admin/profile');
+    public function deleteproduct(Request $req,$id){
+
+        $tbl_u=TblProduct::find($id);
+        $tbl_u->delete();  
+
+        return redirect('ProductTable');
     }
-
-
 }

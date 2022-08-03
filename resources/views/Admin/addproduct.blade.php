@@ -22,10 +22,9 @@
           <div class="card">
             <div class="card-body">
               
-             @if(isset($_GET['id'])){
+             @if(isset($product))
               <h5><b>UPDATE</b></h5>
-             }
-             @else
+            @else
               <h5><b>ADD</b></h5>
             @endif
 
@@ -35,26 +34,26 @@
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
-                    <input type="text" name="name" class="form-control" value="{{$product->productname}}" >
+                    <input type="text" name="name" class="form-control" value="@if(isset($product)){{$product->productname}} @else @endif" >
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label" >Price</label>
                   <div class="col-sm-10">
-                    <input type="number" name="price" class="form-control" value="{{$product->price}}">
+                    <input type="number" name="price" class="form-control" value="@if(isset($product)){{$product->price}}@else @endif">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputfile" class="col-sm-2 col-form-label">Image</label>
                   <div class="col-sm-10">
-                    <input class="form-control" name="image" type="file" value="{{$product->img}}">
+                    <input class="form-control" name="image" type="file" value="@if(isset($product)){{$product->img}}@else @endif">
                   </div>
                 </div>
                 
                 <div class="row mb-3">
                   <label for="inputtext" class="col-sm-2 col-form-label">Description</label>
                   <div class="col-sm-10">
-                    <input class="form-control" name="description" style="height: 60px" value="{{$product->descriptions}}">
+                    <input class="form-control" name="description" style="height: 60px" value="@if(isset($product)){{$product->descriptions}}@else @endif">
                   </div>
                 </div>
                 
@@ -62,7 +61,7 @@
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label"></label>
                   <div class="col-sm-10">
-                    <input type="submit" name="save"  value="Save" class="btn btn-primary">
+                    <input type="submit" name="save"  value="@if(isset($product))Update @else Save @endif" class="btn btn-primary">
                   </div>
                 </div>
 

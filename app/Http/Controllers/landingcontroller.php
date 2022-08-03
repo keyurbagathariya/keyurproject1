@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\TblProduct;
 use App\Models\TblUser;
+use App\Models\TblContactus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class landingcontroller extends Controller
 {
     public function home()
     {
         $menu=TblProduct::all();
-        return view('userside/home',compact('menu'));
+        $user=TblUser::all();
+        return view('userside/home',compact('menu','user'));
     }
 
     public function login(Request $req)
@@ -30,11 +33,11 @@ class landingcontroller extends Controller
                         echo"WELCOME TO THIS WEBSITE";
                         $req->session()->put('admin',$user);
                         return redirect('/Admin');
-                    }
-                }else{
+                    }else{
                     
                     $req->session()->put('user',$user);
                     return redirect('/menu');
+                    }
                 }
             }
         }
@@ -63,7 +66,8 @@ class landingcontroller extends Controller
                }
                 $user->save();
 
-                return redirect('/');
+                echo "You Are Register succeessfull";
+                return redirect('/login');
         }
         return view('userside/register');
     }
@@ -78,6 +82,33 @@ class landingcontroller extends Controller
         }
 
     }
+
+    public function manageprofile(Request $req,$id){
+        
+        // $user =DB::table('tbl_users')
+        //                 ->where('id',$id)->first();
+
+            $user=TblUser::find($id);
+
+        if($req->input('save')){
+             
+            $user->name=$req->get('name');
+            $user->email=$req->get('email');
+            $user->password=$req->get('password');
+            $user->image=$req->get('image');
+            
+            if($req->file('image')){
+                $image=$req->file('image');
+                $fname=$req->file('image')->getClientOriginalName();
+                $path="upload/";
+                $image->move($path,$fname);
+                $user->image=$fname;
+            }
+            $user->save();
+        }
+        return view('userside/manageprofile',compact('user'));
+    }
+
     public function menu()
     {
         $menu=TblProduct::all();
@@ -89,16 +120,38 @@ class landingcontroller extends Controller
         return view('userside/aboutus');
     }
 
+    public function ourchef()
+    {
+        return view('userside/ourchef');
+    }
+
     public function blog()
     {
         return view('userside/blog');
     }
 
-    public function contactus()
+    public function contactus(Request $req)
     {
+
+          if($req->input('save')){
+            
+                $user=new TblContactus;            
+               
+                $user->name=$req->input('Name');
+                $user->email=$req->input('Email');
+                $user->phone_num=$req->input('Phone');
+                $user->message=$req->input('Message');
+
+                $user->save();
+          }
+                
+      
         return view('userside/contactus');
     }
 
+    public function addcart(Request $req){
+
+    }
 
     public function services()
     {

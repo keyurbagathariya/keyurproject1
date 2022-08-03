@@ -57,14 +57,15 @@
                     </div>
                     <div class="col-9 address-right mt-2">
                         <h5 class="address mb-2">Phone</h5>
-                        <p>+1 234 567 8901</p>
+                        <p>+91 97252 88220</p>
                     </div>
                 </div>
             </div>
             <!-- //contact address -->
             <!-- contact form -->
             <div class="col-lg-7 contact-right mt-lg-0 mt-5">
-                <form action="#" method="post">
+                <form action="" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-6 form-group pr-lg-2">
                             <input type="text" class="form-control" name="Name" placeholder="Name" required="">
@@ -77,9 +78,9 @@
                         <input type="text" class="form-control" name="Phone" placeholder="Phone" required="">
                     </div>
                     <div class="form-group">
-                        <textarea name="Message" class="form-control" placeholder="Message" required=""></textarea>
+                        <input type="text"  name="Message" height="200px" width="700px" class="form-control" placeholder="Message" required="">
                     </div>
-                    <button type="submit" class="btn submit-contact-main ml-auto">Submit</button>
+                    <input type="submit"  name="save" value="Submit" class="btn submit-contact-main ml-auto btn btn-warning">
                 </form>
             </div>
             <!-- contact form -->

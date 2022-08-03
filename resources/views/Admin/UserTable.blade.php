@@ -31,28 +31,22 @@
                     <th scope="col">id</th>
                     <th scope="col">Name</th>
                     <th scope="col">email</th>
-                    {{-- <th scope="col">password</th> --}}
                     <th scope="col">image</th>
                     <th scope="col">role_id</th>
                     <th scope="col">action</th>
                   </tr>
                 </thead>
                 <tbody>
-                   @foreach ($tbl_u as $u) 
+                   @foreach ($tbl_u as $user) 
                   <tr>
-                     <th scope="row">{{$u->id }} </th>
-                    <td>{{$u->name }}</td>
-                    <td>{{$u->email }}</td>
-                    {{-- <td>{{$u->password }}</td> --}}
-                    <td><img src="{{url('/upload').$u->image}}" width="20px" hight="20px"/></td>
-                    <td>{{$u->roleid}}</td>
+                     <th scope="row">{{$loop->index+1}} </th>
+                    <td>{{$user->name }}</td>
+                    <td>{{$user->email }}</td>
+                    <td><img src="{{url('upload/'.$user->image)}}" width="80px" hight="80px"/></td>
+                    <td>{{$user->roleid}}</td>
                     <td> 
-                      <a href="{{route('deleteuser',$u->id)}}" class="btn btn-danger" name="delete">DELETE</a>
+                      <a href="{{route('deleteuser',$user->id)}}" class="btn btn-danger bi-trash" name="delete">DELETE</a>
                     </td>
-                    <td>
-                      <a href="{{route('edituser',$u->id)}}" class="btn btn-warning" name="update">UPDATE</a>
-                    </td>
-                  
                   </tr>
                 @endforeach
                   

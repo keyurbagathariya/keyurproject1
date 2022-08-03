@@ -38,16 +38,16 @@
                  <tbody>
                     @foreach ($tbl_p as $p) 
                    <tr>
-                     <th scope="row">{{$p->id }}</th>
+                     <th scope="row">{{$loop->index+1}}</th>
                      <td>{{$p->productname}}</td>
                      <td>{{ $p->price}}</td>
-                     <td><img src="{{url('upload/'.$p->img)}}" width="20px" hight="20px"/></td>
+                     <td><img src="{{url('upload/'.$p->img)}}" width="80px" hight="80px"/></td>
                      <td>{{ $p->descriptions }}</td>
                      <td> 
-                         <a href="{{route('deleteproduct',$p->id)}}" class="btn btn-danger" name="delete">DELETE</a>
+                         <a href="{{route('deleteproduct',$p->id)}}" class="btn btn-danger bi-trash" name="delete">DELETE</a>
                      </td>
                      <td>
-                         <a href="{{route('editproduct',$p->id)}}" class="btn btn-warning" name="update">UPDATE</a>
+                         <a href="{{route('editproduct',$p->id)}}" class="btn btn-warning bi-pencil-square" name="update">UPDATE</a>
                      </td>
                    </tr>
                    @endforeach

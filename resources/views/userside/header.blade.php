@@ -105,7 +105,7 @@
 										<a href="#dribble">
 											<span class="fa fa-dribbble"></span>
 										</a>
-									</li>
+									</li>								
 								</ul>
 								<!-- //social icons -->
 							</div>
@@ -124,7 +124,7 @@
 			<div class="nav-content">
 				<!-- logo -->
 				<h1>
-					<a id="logo" class="logo" href="index.html">
+					<a id="logo" class="logo" href="{{route('home')}}">
 						<img src="{{url('userassets/')}}/images/logo.png" alt="" class="img-fluid"><span>Tasty</span> Burger
 					</a>
 				</h1>
@@ -145,16 +145,26 @@
 								<a href="#pages">Pages <span class="fa fa-angle-down" aria-hidden="true"></span></a>
 								<input type="checkbox" id="drop-3" />
 								<ul>
+									@if(Session::has('user'))
+										 <li><b> welcome {{Session()->get('user')->name;}}</b></li>
+										<li><a class="drop-text" href="{{route('manageprofile',Session()->get('user')->id)}}">Manage Profile</a></li>
+										<li><a class="drop-text" href="{{route('services')}}">Services</a></li>
+										<li><a class="drop-text" href="{{route('ourchef')}}">Our Chef</a></li>
+										<li><a class="drop-text" href="{{route('blog')}}">Blog</a></li>
+										<li><a class="drop-text" href="{{route('single')}}">Single Page</a></li>
+
+										
+									@else
+									<li><a class="drop-text" href="{{route('register')}}">Register</a></li>
 									<li><a class="drop-text" href="{{route('services')}}">Services</a></li>
-									<li><a class="drop-text" href="{{route('aboutus')}}">Our Chefs</a></li>
 									<li><a class="drop-text" href="{{route('blog')}}">Blog</a></li>
 									<li><a class="drop-text" href="{{route('single')}}">Single Page</a></li>
-									<li><a class="drop-text" href="{{route('login')}}">Login</a></li>
-									<li><a class="drop-text" href="{{route('register')}}">Register</a></li>
+									@endif
 								</ul>
 							</li>
 							<li><a href="{{route('menu')}}">Menu</a></li>
 							<li><a href="{{route('contactus')}}">Contact Us</a></li>
+							<i class="bi bi-cart-fill"></i>
 							<li>
 								<!-- login -->
 								<a href="https://w3layouts.com/" target="_blank" class="dwn-button ml-lg-5">
