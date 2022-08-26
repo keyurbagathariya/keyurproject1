@@ -77,6 +77,7 @@
 					</div>
 					<div class="info-form-right mt-4 p-0">
 						<form action="#" method="post">
+							@csrf
 							<div class="row">
 								<div class="col-lg-6 form-group mb-2 pr-lg-1">
 									<input type="text" class="form-control" name="Name" placeholder="Name" required="">
@@ -93,7 +94,7 @@
 								<textarea name="Comment" class="form-control" placeholder="Comment"
 									required=""></textarea>
 							</div>
-							<button type="submit" class="btn submit-contact ml-auto">Submit</button>
+							<input type="submit" class="btn btn-btn-warning " name="save" value="Submit">
 						</form>
 					</div>
 				</div>
@@ -103,8 +104,8 @@
 	<!-- //footer -->
 	<!-- copyright -->
 	<div class="cpy-right text-center py-3">
-		<p>© 2019 Tasty Burger. All rights reserved | Design by
-			<a href="http://w3layouts.com"> W3layouts.</a>
+		<p>© 2022 Tasty Burger. All rights reserved | Design by
+			<a href="http://w3layouts.com"> Keyur.</a>
 		</p>
 	</div>
 	<!-- //copyright -->

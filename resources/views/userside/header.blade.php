@@ -24,6 +24,8 @@
 	<link rel="stylesheet" href="{{url('userassets/')}}/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
 	<link href="{{url('userassets/')}}/css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
 	<!-- css slider -->
 	<link rel="stylesheet" href="{{url('userassets/')}}/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
@@ -152,8 +154,6 @@
 										<li><a class="drop-text" href="{{route('ourchef')}}">Our Chef</a></li>
 										<li><a class="drop-text" href="{{route('blog')}}">Blog</a></li>
 										<li><a class="drop-text" href="{{route('single')}}">Single Page</a></li>
-
-										
 									@else
 									<li><a class="drop-text" href="{{route('register')}}">Register</a></li>
 									<li><a class="drop-text" href="{{route('services')}}">Services</a></li>
@@ -164,9 +164,14 @@
 							</li>
 							<li><a href="{{route('menu')}}">Menu</a></li>
 							<li><a href="{{route('contactus')}}">Contact Us</a></li>
-							<i class="bi bi-cart-fill"></i>
-							<li>
-								<!-- login -->
+							 @if(Session::has('user'))
+							 <li>
+           					   <a class="dropdown-item d-flex align-items-center" href="{{route('addcart')}}">
+                			     <i class="bi bi-cart-fill"></i>
+                			   </a>
+            				 </li>
+            				 @endif
+     						<!-- login -->
 								<a href="https://w3layouts.com/" target="_blank" class="dwn-button ml-lg-5">
 									<span class="fa fa-cloud-download mt-lg-0 mt-4" aria-hidden="true"></span>
 								</a>

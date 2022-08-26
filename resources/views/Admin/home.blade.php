@@ -101,9 +101,6 @@
                   <td> 
                     <a href="{{route('deleteuser',$u->id)}}" class="btn btn-danger bi-trash" name="delete">DELETE</a>
                   </td>
-                  <td>
-                    <a href="{{route('edituser',$u->id)}}" class="btn btn-warning bi-pencil-square" name="update">UPDATE</a>
-                  </td>
                 </tr>
               @endforeach
                 

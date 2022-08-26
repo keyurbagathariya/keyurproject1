@@ -17,9 +17,15 @@
 							<a href="{{route('aboutus')}}" class="button-w3ls active mt-5">Read More
 								<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
 							</a>
+							@if(Session::has('user'))
 							<a href="{{route('menu')}}" class="button-w3ls mt-5 ml-2">Order Now
 								<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
 							</a>
+							@else
+							<a href="{{route('login')}}" class="button-w3ls mt-5 ml-2">Order Now
+								<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+							</a>
+							@endif
 						</div>
 					</div>
 				</div>

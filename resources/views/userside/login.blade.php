@@ -37,7 +37,7 @@
 						</div>
 						<input type="submit" class="btn submit mb-4" href="{{route('menu')}}" name="login" value="Login">
 						<p class="forgot-w3ls text-center mb-3">
-							<a href="#" class="text-da">Forgot your password?</a>
+							<a href="{{route('confirmemail')}}" class="text-da">Forgot your password?</a>
 						</p>
 						<p class="account-w3ls text-center text-da">
 							Don't have an account?

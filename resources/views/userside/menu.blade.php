@@ -46,14 +46,21 @@
 
 <!-- gallery model-->
 <!-- gallery popup 1 -->
+
 @foreach ($menu as $m)
 <div id="gal1" class="pop-overlay" >
     <div class="popup">
         <img class="img-fluid" src="{{url('upload/'.$m->img)}}" alt="">
         <h4 class="p-mask">{{$m->productname}} - - <span>${{$m->price}}</span></h4>
-        <a href="{{route('login')}}" class="button-w3ls active mt-3">Order Now
+        @if(Session::has('user'))
+        <a href="{{route('addcart')}}" class="button-w3ls active mt-3">Order Now
             <span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
         </a>
+        @else
+         <a href="{{route('login')}}" class="button-w3ls active mt-3">Order Now
+            <span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
+        </a>
+       @endif
         <a class="close" href="#gallery">×</a>
     </div>
 </div>

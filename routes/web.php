@@ -35,6 +35,15 @@ Route::post('/ProductTable',[admincontroller::class,'ProductTable'])->name('Prod
 Route::get('/profile',[admincontroller::class,'profile'])->name('profile');
 Route::get('/contact',[admincontroller::class,'contact'])->name('contact');
 
+Route::get('/editprofile',[admincontroller::class,'editprofile'])->name('editprofile');
+Route::post('/editprofile',[admincontroller::class,'editprofile'])->name('editprofile');
+
+Route::get('/changepassword',[admincontroller::class,'changepassword'])->name('changepassword');
+Route::post('/changepassword',[admincontroller::class,'changepassword'])->name('changepassword');
+
+
+
+
 
                                 //INSERT
 Route::get('/addproduct',[admincontroller::class,'addproduct'])->name('addproduct');
@@ -52,8 +61,6 @@ Route::get('/deleteproduct/{id}',[admincontroller::class,'deleteproduct'])->name
 Route::get('/editproduct/{id}',[admincontroller::class,'editproduct'])->name('editproduct');
 Route::post('/editproduct/{id}',[admincontroller::class,'editproduct'])->name('editproduct');
 
-Route::get('/edituser/{id}',[admincontroller::class,'edituser'])->name('edituser');
-Route::post('/edituser/{id}',[admincontroller::class,'edituser'])->name('edituser');
 
                                         // USERSIDE
 
@@ -72,6 +79,20 @@ Route::post('/login',[landingcontroller::class,'login'])->name('login');
 Route::get('/register',[landingcontroller::class,'register'])->name('register');
 Route::post('/register',[landingcontroller::class,'register'])->name('register');
 
+Route::get('/confirmemail',[landingcontroller::class,'confirmemail'])->name('confirmemail');
+Route::post('/confirmemail',[landingcontroller::class,'confirmemail'])->name('confirmemail');
+
+Route::get('/forgotpassword',[landingcontroller::class,'forgotpassword'])->name('forgotpassword');
+Route::post('/forgotpassword',[landingcontroller::class,'forgotpassword'])->name('forgotpassword');
+
+
+// Route::get('/sendingmail',[landingcontroller::class,'sendingmail'])->name('sendingmail');
+// Route::post('/sendingmail',[landingcontroller::class,'sendingmail'])->name('sendingmail');
+
+
+Route::get('/sendmail',[landingcontroller::class,'sendmail'])->name('sendmail');
+
+
 
 Route::get('/aboutus',[landingcontroller::class,'aboutus'])->name('aboutus');
 Route::get('/ourchef',[landingcontroller::class,'ourchef'])->name('ourchef');
@@ -80,8 +101,14 @@ Route::get('/logout',[landingcontroller::class,'logout'])->name('logout');
 Route::get('/menu',[landingcontroller::class,'menu'])->name('menu');
 Route::get('/services',[landingcontroller::class,'services'])->name('services');
 Route::get('/single',[landingcontroller::class,'single'])->name('single');
-Route::get('/addcart',[landingcontroller::class,'addcart'])->name('addcart');
+Route::post('/addcart',[landingcontroller::class,'addcart'])->name('addcart');
 
+
+// Route::get('/sendmail',function(){
+//         $details=['name'=>'keyur'];
+//         \Mail::to('bagathariyakeyur7600@gmail.com')->send(new \App\Mail\Mail($details));
+//         dd('success...');
+// });
 
 use App\Events\MyEvent;
 

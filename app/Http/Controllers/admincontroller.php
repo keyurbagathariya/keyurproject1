@@ -37,6 +37,35 @@ class admincontroller extends Controller
     public function profile(){
         return view('Admin/profile');
     }
+    
+    public function editprofile(Request $req){
+
+         // $user=TblUser::
+        $admin= new TblUser();
+        if($req->input('save')){
+            
+            $admin->name=$req->get('name');
+            $admin->email=$req->get('email');
+            $admin->password=$req->get('password');
+            $admin->image=$req->get('image');
+
+            if($req->file('image')){
+                $image=$req->file('image');
+                $fname=$req->file('image')->getClientOriginalName();
+                $path="upload/";
+                $image->move($path,$fname);
+                $product->image=$fname;
+            }
+            $admin->save();
+        }
+
+        return view('Admin/editprofile',compact('admin'));
+    }
+
+    public function changepassword(Request $req){
+        return view('Admin/changepassword');
+    }
+
 
 
                     //INSERT
@@ -45,7 +74,7 @@ class admincontroller extends Controller
     {
         
         if($req->input('save')){
-           
+           $product=new TblProduct();
             $product->productname=$req->input('name');
             $product->price=$req->input('price');
             $product->descriptions=$req->input('description');
@@ -92,27 +121,6 @@ class admincontroller extends Controller
                     //UPDATE
 
 
-    public function edituser(Request $req,$id){
-       
-        $user=TblUser::find($id);
-        if($req->input('save')){
-        
-            $user->name=$req->get('name');
-            $user->email=$req->get('email');
-            $user->password=$req->get('password');
-            $user->image=$req->get('image');
-            
-            if($req->file('image')){
-                $img=$req->file('image');
-                $fname=$req->file('image')->getClientOriginalName();
-                $path="upload/";
-                $img->move($path,$fname);
-                $user->img=$fname;
-            }
-            $user->save();
-        }
-        return view('Admin/users',compact('user'));
-    }
 
     public function editproduct(Request $req,$id){
        

@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="Phone" placeholder="Phone" required="">
+                        <input type="number" class="form-control" name="Phone" placeholder="Phone" required="">
                     </div>
                     <div class="form-group">
                         <input type="text"  name="Message" height="200px" width="700px" class="form-control" placeholder="Message" required="">

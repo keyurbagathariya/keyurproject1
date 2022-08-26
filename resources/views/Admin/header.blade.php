@@ -209,14 +209,15 @@
 
         <li class="nav-item dropdown pe-3">
 
+          @if(Session::has('admin'))
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{url('upload/IMG_2380-02.jpeg')}}" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Keyur bagathariya</span>
+            <img src="{{url('upload/IMG_2380-02.jpg')}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{Session()->get('admin')->name;}}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Keyur bagathariya</h6>
+              <h6>{{Session()->get('admin')->name;}}</h6>
               <span>Web Developer</span>
             </li>
             <li>
@@ -253,6 +254,7 @@
                 <span>Sign Out</span>
               </a>
             </li>
+            @endif
 
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
